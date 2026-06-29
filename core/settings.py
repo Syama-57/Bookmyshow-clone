@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-4f6os1(*h(l*9&p&i&q7_c7k+_vk!gkrz3to-7o-&r3ff@7w+t
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    'bookmyshow-clone-ashen.vercel.app',
+    
     '.vercel.app',
     '127.0.0.1',
     'localhost'
