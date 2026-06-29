@@ -13,8 +13,12 @@ from rest_framework_simplejwt.views import (
     TokenObtainPairView,
     TokenRefreshView,
 )
+ 
+def home_view(request):
+    return JsonResponse({"message": "Welcome to the BookMyShow Clone API!"})
 
 urlpatterns = [
+    path('', home_view, name='home'),
     path('admin/', admin.site.urls),
     path('api/movies/', movie_list),
     path('api/movies/<int:movie_id>/shows/', show_list_by_movie),
