@@ -17,7 +17,11 @@ from rest_framework_simplejwt.views import (
 def home_view(request):
     return JsonResponse({"message": "Welcome to the BookMyShow Clone API!"})
 
+def ignore_favicon(request):
+    return HttpResponse(status=204)
+
 urlpatterns = [
+    path('favicon.ico', ignore_favicon),
     path('', home_view, name='home'),
     path('admin/', admin.site.urls),
     path('api/movies/', movie_list),
