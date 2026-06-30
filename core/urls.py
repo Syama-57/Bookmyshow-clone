@@ -5,10 +5,9 @@ The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/6.0/topics/http/urls/
 """
 from django.contrib import admin
-from django.urls import path`nfrom django.http import JsonResponse, HttpResponse
-from django.http import JsonResponse, HttpResponse  # <-- ADDED THIS LINE
+from django.urls import path
+from django.http import JsonResponse, HttpResponse
 from bookings.views import movie_list, show_list_by_movie, create_booking
-
 # 1. Import the JWT views from rest_framework_simplejwt
 from rest_framework_simplejwt.views import (
     TokenObtainPairView,
